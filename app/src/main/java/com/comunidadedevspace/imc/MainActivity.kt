@@ -1,6 +1,7 @@
 package com.comunidadedevspace.imc
 
 import android.app.appsearch.StorageInfo
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -47,7 +48,20 @@ class MainActivity : AppCompatActivity() {
                 val resultado = peso / alturaQ2
 
 
-                println("acao do botao" + resultado)
+                //Navegar para próxima tela
+                //Criar o layout da próxima tela
+                //Passar dados (resultado) para próxima tela
+
+                //Intent - Classe do próprio android
+
+                val intent = Intent(this, ResultActivity2::class.java)
+                intent.putExtra( KEY_RESULT_IMC, resultado)
+                startActivity(intent)
+
+                //Cores
+                // EditText + background + icone
+                // Gradiente + icone + titulo + descrição
+
             }
         }
     }
